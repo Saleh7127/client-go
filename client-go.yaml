@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: client-go
+  name: client-go
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: client-go
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: client-go
+    spec:
+      containers:
+      - image: saleh7127/client-go:0.1.1
+        imagePullPolicy: Always
+        name: client-go
+        resources: {}
+status: {}
